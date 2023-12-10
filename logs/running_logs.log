@@ -1,0 +1,360 @@
+[2023-12-01 23:01:07,319: INFO: server: Started server process [52937]]
+[2023-12-01 23:01:07,322: INFO: on: Waiting for application startup.]
+[2023-12-01 23:01:07,322: INFO: on: Application startup complete.]
+[2023-12-01 23:01:07,322: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2023-12-01 23:02:27,444: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-01 23:02:27,449: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-01 23:02:27,451: INFO: common: created directory at: artifacts]
+[2023-12-01 23:02:27,451: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-12-01 23:02:27,452: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "app.py", line 41, in predict_route
+    raise e
+  File "app.py", line 38, in predict_route
+    text = obj.predict(text)
+  File "/Users/shailygoyal/Desktop/projects/Text-Summarization/src/textSummarizer/pipeline/prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 718, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 550, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+[2023-12-01 23:02:29,828: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-01 23:02:29,832: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-01 23:02:29,832: INFO: common: created directory at: artifacts]
+[2023-12-01 23:02:29,832: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-12-01 23:02:29,834: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "app.py", line 41, in predict_route
+    raise e
+  File "app.py", line 38, in predict_route
+    text = obj.predict(text)
+  File "/Users/shailygoyal/Desktop/projects/Text-Summarization/src/textSummarizer/pipeline/prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 718, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 550, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+[2023-12-01 23:02:47,505: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-01 23:02:47,507: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-01 23:02:47,507: INFO: common: created directory at: artifacts]
+[2023-12-01 23:02:47,508: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-12-01 23:02:47,508: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "app.py", line 41, in predict_route
+    raise e
+  File "app.py", line 38, in predict_route
+    text = obj.predict(text)
+  File "/Users/shailygoyal/Desktop/projects/Text-Summarization/src/textSummarizer/pipeline/prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 718, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 550, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+[2023-12-10 17:02:50,091: INFO: server: Started server process [13635]]
+[2023-12-10 17:02:50,092: INFO: on: Waiting for application startup.]
+[2023-12-10 17:02:50,092: INFO: on: Application startup complete.]
+[2023-12-10 17:02:50,092: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2023-12-10 17:36:34,684: INFO: server: Shutting down]
+[2023-12-10 17:36:34,792: INFO: on: Waiting for application shutdown.]
+[2023-12-10 17:36:34,795: INFO: on: Application shutdown complete.]
+[2023-12-10 17:36:34,796: INFO: server: Finished server process [13635]]
+[2023-12-10 17:36:41,514: INFO: server: Started server process [14411]]
+[2023-12-10 17:36:41,515: INFO: on: Waiting for application startup.]
+[2023-12-10 17:36:41,515: INFO: on: Application startup complete.]
+[2023-12-10 17:36:41,515: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2023-12-10 17:38:35,693: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-10 17:38:35,697: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 17:38:35,701: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 17:38:35,702: INFO: common: created directory at: artifacts]
+[2023-12-10 17:38:35,702: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-10 17:38:40,359: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 5466:7207:A8842F:CCEC0F:6575AA44
+Accept-Ranges: bytes
+Date: Sun, 10 Dec 2023 12:08:38 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10224-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1702210117.610124,VS0,VE2065
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 95a17618ad1898628b8d2d548c43f0c62112f996
+Expires: Sun, 10 Dec 2023 12:13:38 GMT
+Source-Age: 2
+
+]
+[2023-12-10 17:38:40,553: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-12-10 17:38:40,553: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-12-10 17:38:40,556: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 17:38:40,558: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 17:38:40,558: INFO: common: created directory at: artifacts]
+[2023-12-10 17:38:40,558: INFO: common: created directory at: artifacts/data_validation]
+[2023-12-10 17:38:40,559: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-12-10 17:38:40,559: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-12-10 17:38:40,562: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 17:38:40,563: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 17:38:40,563: INFO: common: created directory at: artifacts]
+[2023-12-10 17:38:40,563: INFO: common: created directory at: artifacts/data_transformation]
+[2023-12-10 17:38:50,677: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-12-10 17:38:50,677: INFO: main: *******************]
+[2023-12-10 17:38:50,677: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2023-12-10 17:38:50,681: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 17:38:50,684: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 17:38:50,684: INFO: common: created directory at: artifacts]
+[2023-12-10 17:38:50,684: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 17:46:05,526: ERROR: main: Using the `Trainer` with `PyTorch` requires `accelerate>=0.20.1`: Please run `pip install transformers[torch]` or `pip install accelerate -U`]
+Traceback (most recent call last):
+  File "main.py", line 51, in <module>
+    model_trainer.main()
+  File "/Users/shailygoyal/Desktop/projects/Text-Summarization/src/textSummarizer/pipeline/stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "/Users/shailygoyal/Desktop/projects/Text-Summarization/src/textSummarizer/conponents/model_trainer.py", line 34, in train
+    trainer_args = TrainingArguments(
+  File "<string>", line 117, in __init__
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/training_args.py", line 1442, in __post_init__
+    and (self.device.type != "cuda")
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/training_args.py", line 1887, in device
+    return self._setup_devices
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/utils/generic.py", line 54, in __get__
+    cached = self.fget(obj)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/training_args.py", line 1787, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=0.20.1`: Please run `pip install transformers[torch]` or `pip install accelerate -U`
+[2023-12-10 17:50:28,243: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 17:50:28,253: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 17:50:28,255: INFO: common: created directory at: artifacts]
+[2023-12-10 17:50:28,256: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-12-10 17:50:28,268: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "app.py", line 41, in predict_route
+    raise e
+  File "app.py", line 38, in predict_route
+    text = obj.predict(text)
+  File "/Users/shailygoyal/Desktop/projects/Text-Summarization/src/textSummarizer/pipeline/prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 718, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 550, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/opt/anaconda3/envs/summary/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+[2023-12-10 18:22:48,453: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 18:22:48,482: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 18:22:48,491: INFO: common: created directory at: artifacts]
+[2023-12-10 18:22:48,496: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 18:23:49,718: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 18:23:49,725: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 18:23:49,728: INFO: common: created directory at: artifacts]
+[2023-12-10 18:23:49,729: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-10 18:23:49,730: INFO: 1434958058: File already exists of size: ~ 7718 KB]
+[2023-12-10 18:24:00,261: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 18:24:00,265: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 18:24:00,266: INFO: common: created directory at: artifacts]
+[2023-12-10 18:24:00,267: INFO: common: created directory at: artifacts/data_validation]
+[2023-12-10 18:24:19,516: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 18:24:19,522: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 18:24:19,523: INFO: common: created directory at: artifacts]
+[2023-12-10 18:24:19,524: INFO: common: created directory at: artifacts/data_transformation]
+[2023-12-10 18:32:30,273: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 18:32:30,277: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 18:32:30,278: INFO: common: created directory at: artifacts]
+[2023-12-10 18:32:30,280: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 18:40:03,727: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 18:40:03,737: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 18:40:03,741: INFO: common: created directory at: artifacts]
+[2023-12-10 18:40:03,743: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 18:40:07,024: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 18:40:07,028: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 18:40:07,029: INFO: common: created directory at: artifacts]
+[2023-12-10 18:40:07,029: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 18:41:48,362: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 18:41:48,366: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 18:41:48,367: INFO: common: created directory at: artifacts]
+[2023-12-10 18:41:48,369: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 19:11:08,767: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 19:11:08,780: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 19:11:08,785: INFO: common: created directory at: artifacts]
+[2023-12-10 19:11:08,786: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 19:13:41,727: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 19:13:41,733: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 19:13:41,735: INFO: common: created directory at: artifacts]
+[2023-12-10 19:13:41,736: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 19:30:07,879: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 19:30:07,888: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 19:30:07,890: INFO: common: created directory at: artifacts]
+[2023-12-10 19:30:07,891: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 19:33:34,053: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 19:33:34,063: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 19:33:34,067: INFO: common: created directory at: artifacts]
+[2023-12-10 19:33:34,069: INFO: common: created directory at: artifacts/model_trainer]
+[2023-12-10 19:35:24,534: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-12-10 19:35:24,544: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-10 19:35:24,546: INFO: common: created directory at: artifacts]
+[2023-12-10 19:35:24,547: INFO: common: created directory at: artifacts/model_trainer]
